@@ -1,6 +1,15 @@
-﻿namespace Model1.Controllers
+﻿using Microsoft.AspNetCore.Mvc;
+using Model1.Models;
+
+namespace Model1.Controllers
 {
-    public class RestaurantController
+    [ApiController]
+    public class RestaurantController(MapDbContext db) : ControllerBase
     {
+        [HttpGet("system/api/restaurant/list")]
+        public ApiResult List()
+        {
+            return ApiResult.Ok();
+        }
     }
 }

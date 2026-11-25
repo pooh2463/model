@@ -1,6 +1,6 @@
 ﻿namespace Model1
 {
-    class ApiResult
+    public class ApiResult
     {
         public int Code { get; set; }
         public string Msg { get; set; } = "";
